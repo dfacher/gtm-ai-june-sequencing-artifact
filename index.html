@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>GTM.ai June Sequencing — Discussion Artifact</title>
+<!-- hermes-artifact-toolbar: intentionally hidden; this roadmap artifact uses its own edit/sync controls. -->
+<style>
+:root{--bg:#f4f1ea;--paper:#fffdf8;--ink:#14120f;--muted:#6c665c;--line:#ddd5c8;--green:#0b6b5b;--blue:#174b7a;--amber:#b77316;--red:#b42318;--shadow:0 18px 50px rgba(28,24,18,.10);--sans:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;--mono:"SFMono-Regular",Menlo,Consolas,monospace}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,#fbf8f0 0,#f4f1ea 52%,#ede7dc 100%);color:var(--ink);font-family:var(--sans);line-height:1.45} .wrap{max-width:1280px;margin:0 auto;padding:34px 26px 70px}
+.hero{min-height:74vh;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:stretch;margin-bottom:36px} .panel{background:rgba(255,253,248,.92);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow)} .hero-main{padding:44px;display:flex;flex-direction:column;justify-content:space-between} .eyebrow{font:900 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--green)} h1{font-size:72px;line-height:.9;letter-spacing:-.065em;margin:18px 0 22px;max-width:820px} .lead{font-size:22px;line-height:1.35;color:#332f28;max-width:840px;margin:0} .hero-side{padding:28px;display:grid;gap:16px} .decision{border:1px solid var(--line);background:#fffaf0;border-radius:20px;padding:20px} .decision h2{font-size:22px;margin:0 0 8px} .decision p{margin:0;color:var(--muted)} .decision strong{color:var(--ink)}
+.nav{position:sticky;top:0;z-index:5;margin:-12px 0 30px;padding:10px;background:rgba(244,241,234,.82);backdrop-filter:blur(12px);border:1px solid rgba(221,213,200,.7);border-radius:999px;display:flex;gap:8px;justify-content:center;box-shadow:0 10px 30px rgba(28,24,18,.07)} .nav a{text-decoration:none;color:#342f28;font-weight:800;font-size:13px;padding:9px 13px;border-radius:999px} .nav a:hover{background:#fffdf8}
+.section-title{margin:42px 0 16px;display:grid;grid-template-columns:.7fr 1.3fr;gap:22px;align-items:end} .section-title h2{font-size:40px;line-height:.96;letter-spacing:-.045em;margin:0} .section-title p{margin:0;color:var(--muted);font-size:16px}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px} .principle{padding:22px;border-radius:22px;background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow)} .principle b{display:block;font-size:18px;margin-bottom:8px} .principle p{color:var(--muted);margin:0}
+.matrix-card{padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:auto} table{width:100%;border-collapse:separate;border-spacing:0;min-width:1080px} th,td{vertical-align:top;border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:14px} thead th{background:#f3eadc;position:sticky;top:54px;z-index:1} thead th:first-child{width:270px} thead b{display:block;font-size:16px} thead small{display:block;color:var(--muted);font-weight:600;margin-top:4px} tbody th{background:#fffaf0;text-align:left;width:270px} tbody th span{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#15130f;color:white;font:900 13px var(--mono);margin-bottom:8px} tbody th b{display:block;font-size:17px;line-height:1.12} tbody th small{display:block;margin-top:6px;color:var(--muted);font-weight:500} td{background:#fffdf8;min-height:110px} .chip{display:flex;gap:7px;align-items:flex-start;border:1px solid #e5ded2;border-radius:12px;background:#fff;margin:0 0 7px;padding:8px 9px;font-size:12px;line-height:1.18;box-shadow:0 5px 14px rgba(28,24,18,.05)} .chip span{font:900 10px var(--mono);border-radius:999px;padding:2px 5px;white-space:nowrap;background:#f3eee4} .chip.p0 span{background:#ffe7e3;color:var(--red)} .chip.p1 span{background:#e6f0ff;color:#1553a5} .chip.p2 span{background:#fff2d9;color:#985b00} .empty{color:#c0b7a9}
+.phase-detail{display:grid;grid-template-columns:320px 1fr;gap:18px;margin:18px 0 28px} .phase-copy{position:sticky;top:78px;align-self:start;padding:24px;border-radius:24px;background:#15130f;color:white;box-shadow:var(--shadow)} .phase-copy .eyebrow{color:#bfe4d9} .phase-copy h3{font-size:32px;line-height:.98;letter-spacing:-.04em;margin:12px 0} .phase-copy p{color:#d8d0c2;margin:0} .counts{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px} .counts span{font:900 11px var(--mono);border-radius:999px;padding:6px 8px;background:rgba(255,255,255,.10)} .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px} .card{padding:17px;border-radius:18px;background:var(--paper);border:1px solid var(--line);box-shadow:0 10px 24px rgba(28,24,18,.07)} .card-kicker{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px} .card-kicker span{font:900 10px var(--mono);text-transform:uppercase;letter-spacing:.05em;border-radius:999px;background:#f3eee4;color:#635b50;padding:5px 7px} .card.p0 .card-kicker span:first-child{background:#ffe7e3;color:var(--red)} .card.p1 .card-kicker span:first-child{background:#e6f0ff;color:#1553a5} .card.p2 .card-kicker span:first-child{background:#fff2d9;color:#985b00} .card h4{font-size:18px;line-height:1.12;margin:0 0 8px;letter-spacing:-.015em} .card p{font-size:13.5px;color:#5a5348;margin:0 0 10px} .done{font-size:13px;border-top:1px dashed var(--line);padding-top:10px;color:#2d2923}
+.discussion{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px} .question{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)} .question h3{font-size:22px;margin:0 0 10px} .question ul{margin:0;padding-left:18px;color:var(--muted)} .ask{margin-top:18px;padding:26px;border-radius:24px;background:#0b6b5b;color:white;box-shadow:var(--shadow)} .ask h2{font-size:34px;letter-spacing:-.04em;margin:0 0 10px} .ask p{font-size:17px;color:#d8f2ec;margin:0 0 12px} .ask ol{margin:0;padding-left:22px} .ask li{margin:6px 0}
+.footer{color:var(--muted);font-size:12px;margin-top:26px} @media(max-width:900px){.hero,.section-title,.phase-detail,.discussion{grid-template-columns:1fr}h1{font-size:48px}.cards,.principles{grid-template-columns:1fr}.phase-copy{position:relative;top:0}.nav{overflow:auto;justify-content:flex-start;border-radius:18px}}
+@media print{.nav{display:none}body{background:white}.panel,.principle,.matrix-card,.card,.question,.ask{box-shadow:none}.phase-copy{position:relative;top:0}}
+
+.hermes-artifact-toolbar{display:none!important}
+.public-hidden{display:none!important}
+
+/* v3: clickable matrix cards + modal detail */
+.matrix-card .chip{width:100%;cursor:pointer;text-align:left;color:inherit;font-family:inherit;appearance:none;-webkit-appearance:none;transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
+.matrix-card .chip:hover{transform:translateY(-1px);border-color:#cfc4b5;box-shadow:0 8px 18px rgba(28,24,18,.10)}
+.matrix-card .chip:focus-visible{outline:3px solid rgba(11,107,91,.28);outline-offset:2px}
+.modal-backdrop{position:fixed;inset:0;z-index:20;display:none;align-items:center;justify-content:center;background:rgba(20,18,15,.46);backdrop-filter:blur(10px);padding:22px}
+.modal-backdrop.open{display:flex}
+.modal{width:min(720px,100%);max-height:min(760px,88vh);overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:28px;box-shadow:0 30px 90px rgba(20,18,15,.30);padding:24px;position:relative}
+.modal-close{position:absolute;top:18px;right:18px;border:1px solid var(--line);background:#fff;border-radius:999px;width:38px;height:38px;cursor:pointer;font-size:22px;line-height:1;color:#4a4339}
+.modal-close:hover{background:#fff7ea}.modal h3{font-size:30px;line-height:1;margin:34px 0 10px;letter-spacing:-.035em;padding-right:42px}.modal p{font-size:16px;color:#514a40;margin:0 0 16px}.modal-meta{display:flex;gap:8px;flex-wrap:wrap}.modal-meta span{font:900 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;border-radius:999px;background:#f3eee4;color:#635b50;padding:6px 8px}.modal-meta .p0{background:#ffe7e3;color:var(--red)}.modal-meta .p1{background:#e6f0ff;color:#1553a5}.modal-meta .p2{background:#fff2d9;color:#985b00}.modal-done{border-top:1px dashed var(--line);padding-top:14px;margin-top:18px;color:#2d2923}.modal-done b{display:block;margin-bottom:4px}
+@media(max-width:900px){.modal{border-radius:22px;padding:20px}.modal h3{font-size:24px}}
+
+/* editable grid */
+.add-card-btn{width:100%;min-height:34px;border:1px dashed #cfc4b5;border-radius:12px;background:#fffaf2;color:#6b6257;font:900 11px var(--mono);cursor:pointer;margin-top:7px;text-transform:uppercase;letter-spacing:.04em}.add-card-btn:hover{background:#fff3df;color:#211d18;border-color:#b9aa98}.add-card-btn:focus-visible{outline:3px solid rgba(11,107,91,.28);outline-offset:2px}.chip.added{border-color:#c9bda9;background:#fffaf0}.chip.added::after{content:'NEW';font:900 9px var(--mono);color:var(--green);margin-left:auto;padding-top:2px}.modal form{display:grid;gap:12px;margin-top:14px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.modal label{display:grid;gap:5px;font:900 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:#686055}.modal input,.modal textarea,.modal select{font:500 14px var(--sans);text-transform:none;letter-spacing:0;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 11px}.modal textarea{min-height:82px;resize:vertical}.form-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:4px}.primary-action,.secondary-action{border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-weight:900;cursor:pointer}.primary-action{background:#15130f;color:white}.secondary-action{background:#fff;color:#4a4339}.matrix-toolbar{display:flex;justify-content:flex-end;gap:8px;margin:-4px 0 12px}.matrix-toolbar button{border:1px solid var(--line);background:#fffdf8;border-radius:999px;padding:8px 11px;font:900 11px var(--mono);color:#5b5349;cursor:pointer}.matrix-toolbar button:hover{background:#fff3df;color:#15130f}@media(max-width:900px){.form-grid{grid-template-columns:1fr}}
+
+
+/* polished hero + hover drilldown + draggable roadmap */
+.hero{min-height:auto;grid-template-columns:1fr;gap:16px;margin-bottom:28px}.hero-main{padding:42px 44px 32px}.hero-side{padding:0;background:transparent;border:0;box-shadow:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.decision{background:rgba(255,253,248,.9);box-shadow:0 12px 30px rgba(28,24,18,.06)}h1{max-width:1040px;font-size:clamp(46px,6.2vw,78px)}.lead{max-width:980px}.hero .principles{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:28px!important}.principle{box-shadow:0 10px 24px rgba(28,24,18,.055)}
+.matrix-card{overflow:auto;padding:14px}table{min-width:1040px}thead th:first-child,tbody th{width:230px}tbody th{position:relative;padding:16px 12px 14px 16px}tbody th span{float:left;margin:0 10px 26px 0;width:24px;height:24px;font-size:12px}tbody th b{font-size:16px;letter-spacing:-.015em}tbody th small{font-size:12.5px;line-height:1.25;clear:none}td{position:relative;padding:11px;min-width:230px}.matrix-card .chip{width:100%;min-height:34px;cursor:grab;text-align:left;color:inherit;font-family:inherit;appearance:none;-webkit-appearance:none;display:flex;align-items:center;gap:7px;border-radius:11px;margin:0 0 6px;padding:7px 8px;font-size:12px;line-height:1.15;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease,opacity .12s ease}.matrix-card .chip:active{cursor:grabbing}.matrix-card .chip:hover,.matrix-card .chip:focus-visible{transform:translateY(-1px);border-color:#bcae9d;box-shadow:0 8px 18px rgba(28,24,18,.12)}.matrix-card .chip.dragging{opacity:.42;transform:scale(.98)}td.drop-target{outline:3px solid rgba(11,107,91,.22);outline-offset:-5px;background:#fff7e8}.empty{display:block;padding:4px 0 6px}.add-card-btn{width:auto;min-height:26px;border-radius:999px;padding:5px 8px;margin-top:3px;background:transparent;opacity:.58;font-size:10px}.add-card-btn:hover{opacity:1}.matrix-toolbar{justify-content:space-between}.matrix-toolbar:before{content:'Hover for details · drag cards across cells · changes save in this browser';align-self:center;color:var(--muted);font-size:12px}.hover-card{position:fixed;z-index:40;width:min(420px,calc(100vw - 32px));pointer-events:none;opacity:0;transform:translateY(4px) scale(.98);transition:opacity .12s ease,transform .12s ease;background:#15130f;color:white;border:1px solid rgba(255,255,255,.12);border-radius:20px;box-shadow:0 24px 80px rgba(20,18,15,.35);padding:18px}.hover-card.open{opacity:1;transform:translateY(0) scale(1)}.hover-card h3{font-size:21px;line-height:1.05;letter-spacing:-.025em;margin:10px 0 8px}.hover-card p{font-size:13.5px;line-height:1.35;margin:0;color:#e3dccf}.hover-meta{display:flex;gap:6px;flex-wrap:wrap}.hover-meta span{font:900 10px var(--mono);text-transform:uppercase;letter-spacing:.05em;border-radius:999px;background:rgba(255,255,255,.10);color:#eee2d2;padding:5px 7px}.hover-meta .p0{background:#ffe7e3;color:var(--red)}.hover-meta .p1{background:#e6f0ff;color:#1553a5}.hover-meta .p2{background:#fff2d9;color:#985b00}.hover-done{border-top:1px dashed rgba(255,255,255,.22);padding-top:10px;margin-top:12px;color:#eee2d2;font-size:13px}.hover-done b{display:block;color:white;margin-bottom:3px}.modal-backdrop{z-index:50}.footer{margin-top:18px}@media(max-width:900px){.hero-side,.hero .principles{grid-template-columns:1fr}.hero-main{padding:30px 24px}.section-title{grid-template-columns:1fr}.matrix-toolbar{align-items:flex-start;flex-direction:column}.matrix-toolbar:before{content:'Hover for details. Drag cards to move them.'}}
+
+/* standalone update payload */
+.matrix-toolbar-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.payload-panel{margin:18px 0 0;padding:22px;border-radius:24px;background:#15130f;color:white;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start}.payload-panel[hidden]{display:none}.payload-panel .eyebrow{color:#bfe4d9}.payload-panel h2{font-size:28px;line-height:1;margin:8px 0 8px;letter-spacing:-.035em}.payload-panel p{margin:0;color:#d8d0c2;max-width:760px}.payload-panel textarea{grid-column:1/-1;width:100%;min-height:260px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:#0f0d0b;color:#f8efe1;font:12px/1.45 var(--mono);padding:14px;resize:vertical}.payload-actions{display:flex;gap:10px;justify-content:flex-end;align-items:start}.payload-actions .secondary-action{background:rgba(255,255,255,.08);color:white;border-color:rgba(255,255,255,.18)}@media(max-width:900px){.payload-panel{grid-template-columns:1fr}.payload-actions{justify-content:flex-start}.matrix-toolbar{align-items:flex-start;gap:10px}.matrix-toolbar-actions{justify-content:flex-start}}
+
+/* row-header fix: keep journey step number, title, and description visible in standalone screenshots */
+tbody th{overflow:visible;text-align:left;min-width:240px;white-space:normal;line-height:1.25}
+tbody th span{float:none!important;display:inline-grid!important;vertical-align:top;margin:0 0 8px 0!important}
+tbody th b{display:block!important;clear:both!important;margin:2px 0 6px;font-size:16px;line-height:1.15;color:var(--ink)}
+tbody th small{display:block!important;clear:both!important;margin-top:0!important;color:var(--muted);font-size:12.5px;line-height:1.28;text-align:left}
+thead th:first-child,tbody th{width:240px;min-width:240px}
+
+/* standalone fix: table header should not overlay/clamp the first journey row */
+thead th{position:static!important;top:auto!important}
+.sync-status{align-self:center;color:var(--muted);font-size:12px;font-weight:800}.sync-status.ok{color:var(--green)}.sync-status.warn{color:var(--amber)}.sync-status.error{color:var(--red)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero" id="top">
+<div class="hero-main panel">
+<div><div class="eyebrow">GTM.ai June sequencing · presentation artifact</div><h1>Win June by sequencing around Access, Value, and Monetize/Grow.</h1><p class="lead"><b>Stance:</b> the June roadmap should not start with “which One App scope can we ship?” It should start with three gates: Access, Value / Product, and Monetize & Grow.</p></div>
+<div class="principles" style="margin-top:34px"><div class="principle"><b>Perishable traffic changes priority.</b><p>Codex, Vercel, and June builder events create a narrow window. Conversion blockers beat broad surface completeness.</p></div><div class="principle"><b>One App becomes a sequence.</b><p>Builder first, Build on Audiences second, Seller Activation third. These can trade off against each other.</p></div><div class="principle"><b>The operating test is observable.</b><p>Can a builder land, get access, run value, buy one credit, and show up in a usage/follow-up loop?</p></div></div>
+</div>
+<aside class="hero-side panel">
+<div class="decision"><h2>Decision rule</h2><p><strong>Early June:</strong> anything that captures builder traffic or removes signup / entitlement / first-value friction.</p></div>
+<div class="decision"><h2>End June</h2><p><strong>Vercel-ready Build on Audiences:</strong> the audience/platform expansion that makes the event story real.</p></div>
+<div class="decision"><h2>July</h2><p><strong>OneApp for Seller Activation:</strong> seller work starts after builder access, entitlement, usage, and support primitives work.</p></div>
+</aside>
+</section>
+<section id="matrix"><div class="section-title"><h2>Roadmap as a conversation grid</h2><p>Rows are the three journey buckets. Columns are the launch windows. The point is to make trade-offs visible: moving or editing a card is not just a schedule change; it is a bet about what matters for conversion.</p></div><div class="matrix-toolbar"><span id="sync-status" class="sync-status public-hidden" aria-hidden="true">Hosted sync disabled in public copy</span><div class="matrix-toolbar-actions"><button id="generate-update-payload" type="button">Generate update payload</button><button id="sync-hosted-update" class="public-hidden" type="button" aria-hidden="true" tabindex="-1">Sync hosted update</button><button id="copy-added-cards" type="button">Copy grid changes JSON</button><button id="clear-added-cards" type="button">Reset grid changes</button></div></div><div class="matrix-card"><table><thead><tr><th>Journey bucket</th><th><b>Early June</b><small>Capture traffic for Builder</small></th><th><b>End June</b><small>Vercel-ready Build on Audiences</small></th><th><b>July</b><small>OneApp for Seller Activation</small></th></tr></thead><tbody><tr><th><span>1</span><b>Access</b><small>Can a builder enter the front door, authenticate or join the right tenant, receive the Builder SKU, and reach the right surface without manual routing?</small></th><td data-phase="early-june" data-row="access"><span class="empty">—</span><button aria-label="Add card to early-june / access" class="add-card-btn" data-add-phase="early-june" data-add-row="access" type="button">+ Add card</button></td><td data-phase="late-june" data-row="access"><span class="empty">—</span><button aria-label="Add card to late-june / access" class="add-card-btn" data-add-phase="late-june" data-add-row="access" type="button">+ Add card</button></td><td data-phase="july" data-row="access"><span class="empty">—</span><button aria-label="Add card to july / access" class="add-card-btn" data-add-phase="july" data-add-row="access" type="button">+ Add card</button></td></tr><tr><th><span>2</span><b>Value / Product</b><small>Does the product help the builder run a useful GTM job: credentials, API/MCP setup, quickstarts, templates, audiences, Agent Teams, vertical datasets, GQL enrichment, and Build with Vercel?</small></th><td data-phase="early-june" data-row="value-product"><span class="empty">—</span><button aria-label="Add card to early-june / value-product" class="add-card-btn" data-add-phase="early-june" data-add-row="value-product" type="button">+ Add card</button></td><td data-phase="late-june" data-row="value-product"><span class="empty">—</span><button aria-label="Add card to late-june / value-product" class="add-card-btn" data-add-phase="late-june" data-add-row="value-product" type="button">+ Add card</button></td><td data-phase="july" data-row="value-product"><span class="empty">—</span><button aria-label="Add card to july / value-product" class="add-card-btn" data-add-phase="july" data-add-row="value-product" type="button">+ Add card</button></td></tr><tr><th><span>3</span><b>Monetize &amp; Grow</b><small>Can we explain price, sell one credit, track signups and usage, support stuck builders, and expand into seller workflows when the primitives are ready?</small></th><td data-phase="early-june" data-row="monetize-grow"><span class="empty">—</span><button aria-label="Add card to early-june / monetize-grow" class="add-card-btn" data-add-phase="early-june" data-add-row="monetize-grow" type="button">+ Add card</button></td><td data-phase="late-june" data-row="monetize-grow"><span class="empty">—</span><button aria-label="Add card to late-june / monetize-grow" class="add-card-btn" data-add-phase="late-june" data-add-row="monetize-grow" type="button">+ Add card</button></td><td data-phase="july" data-row="monetize-grow"><span class="empty">—</span><button aria-label="Add card to july / monetize-grow" class="add-card-btn" data-add-phase="july" data-add-row="monetize-grow" type="button">+ Add card</button></td></tr></tbody></table></div></section>
+<section class="payload-panel" id="payload-panel" hidden=""><div><div class="eyebrow">Standalone update handoff</div><h2>Payload for Hermes updates</h2><p>After you move or add cards, generate this package and paste it back to Hermes. It includes added cards, card moves, the full current sequence, and a markdown fallback.</p></div><div class="payload-actions"><button class="primary-action" id="copy-update-payload" type="button">Copy payload</button><button class="secondary-action" id="close-payload" type="button">Hide</button></div><textarea aria-label="Generated update payload" id="payload-output" readonly=""></textarea></section>
+<p class="footer">Public working copy · hover for details, drag/edit cards, add cards, and use Generate update payload to export changes.</p>
+<div aria-hidden="true" class="modal-backdrop" id="add-card-modal"><article aria-labelledby="add-modal-title" aria-modal="true" class="modal" role="dialog"><button aria-label="Close" class="modal-close" type="button">×</button><div class="modal-meta" id="add-modal-meta"></div><h3 id="add-modal-title">Add roadmap card</h3><form id="add-card-form"><div class="form-grid"><label>Priority<select name="priority"><option>P0</option><option selected="">P1</option><option>P2</option></select></label><label>Owner<input name="owner" placeholder="Team / owner"/></label></div><label>Title<input name="title" placeholder="Card title" required=""/></label><label>Description<textarea name="desc" placeholder="What needs to happen?" required=""></textarea></label><label>Done means<textarea name="done" placeholder="How will the team know this is complete?" required=""></textarea></label><div class="form-grid"><label>Impact<input name="impact" placeholder="e.g. Conversion"/></label><label>Effort<select name="effort"><option>S</option><option selected="">M</option><option>L</option></select></label></div><div class="form-actions"><button class="secondary-action" id="cancel-add-card" type="button">Cancel</button><button class="primary-action" type="submit">Add to grid</button></div></form></article></div><div aria-hidden="true" class="modal-backdrop" id="edit-card-modal"><article aria-labelledby="edit-modal-title" aria-modal="true" class="modal" role="dialog"><button aria-label="Close" class="modal-close" type="button">×</button><div class="modal-meta" id="edit-modal-meta"></div><h3 id="edit-modal-title">Edit roadmap card</h3><form id="edit-card-form"><input name="id" type="hidden"/><div class="form-grid"><label>Priority<select name="priority"><option>P0</option><option>P1</option><option>P2</option></select></label><label>Owner<input name="owner" placeholder="Team / owner"/></label></div><label>Title<input name="title" placeholder="Card title" required=""/></label><label>Description<textarea name="desc" placeholder="What needs to happen?" required=""></textarea></label><label>Done means<textarea name="done" placeholder="How will the team know this is complete?" required=""></textarea></label><div class="form-grid"><label>Impact<input name="impact" placeholder="e.g. Conversion"/></label><label>Effort<select name="effort"><option>S</option><option>M</option><option>L</option></select></label></div><div class="form-actions"><button class="secondary-action" id="cancel-edit-card" type="button">Cancel</button><button class="primary-action" type="submit">Save card + sync</button></div></form></article></div></div>
+<aside aria-hidden="true" class="hover-card" id="hover-card"><div class="hover-meta" id="hover-meta"></div><h3 id="hover-title"></h3><p id="hover-desc"></p><div class="hover-done"><b>Done means</b><span id="hover-done"></span></div></aside><script id="card-data-script">
+const seedCards = [{"id": "use-in-ide-unified-entry", "title": "Use in IDE as the unified entry", "owner": "Builder growth + Product", "phase": "early-june", "priority": "P0", "impact": "Routing simplification", "effort": "M", "desc": "Collapse Chat vs API vs MCP into one builder path. Lead with Use in IDE, then let the user choose Claude Code, Codex, Cursor/VS Code, Claude Desktop, or custom.", "done": "Start Building produces one shared workspace, credentials, tools, and templates instead of three adjacent funnels.", "row": "access"}, {"id": "agent-safe-signup", "title": "Agent-safe signup verification", "owner": "Growth + Auth", "phase": "early-june", "priority": "P0", "impact": "Signup unblocker", "effort": "M", "desc": "Remove behavioral Press & Hold/CAPTCHA from the default developer/API path. Use magic link, OAuth device code, signed signup token, or risk-based escalation after sandbox issuance.", "done": "An agent-as-user can complete legitimate signup without bypassing human verification.", "row": "access"}, {"id": "access-paths", "title": "Frictionless access paths", "owner": "Product + Auth", "phase": "early-june", "priority": "P0", "impact": "Traffic capture", "effort": "M", "desc": "Make new user/new tenant, new user/existing tenant, and existing user/existing tenant all reach GTM.ai builder access without manual routing.", "done": "User lands, authenticates, sees builder SKU, and can start without internal intervention.", "row": "access"}, {"id": "credential-state-machine", "title": "One working credential state machine", "owner": "Developer platform", "phase": "early-june", "priority": "P0", "impact": "First value", "effort": "M", "desc": "Every Start Building / Get access CTA resolves to a deterministic state: no key yet, sandbox key ready, production setup required, or error. No silent no-op states and no fake masked credentials.", "done": "The user sees a real sandbox bearer token or a specific next step, with Copy, Reveal, Rotate, and Run test.", "row": "value-product"}, {"id": "builder-sku", "title": "Automatic Builder SKU", "owner": "Product Ops", "phase": "early-june", "priority": "P0", "impact": "Traffic capture", "effort": "M", "desc": "Give qualified inbound builders the builder SKU automatically instead of requiring sales or support approval.", "done": "Codex/event inbound cohorts receive the correct entitlement by default.", "row": "access"}, {"id": "pricing-visible", "title": "Visible competitive pricing", "owner": "Growth + PMM", "phase": "early-june", "priority": "P0", "impact": "Conversion", "effort": "S", "desc": "Expose clear pricing so builders understand the offer before sales engagement.", "done": "Pricing page explains builder access, credits, and upgrade path plainly.", "row": "monetize-grow"}, {"id": "credit-explanation-pricing", "title": "Credit explanation pricing page", "owner": "Growth + Billing", "phase": "early-june", "priority": "P0", "impact": "Purchase clarity", "effort": "M", "desc": "Explain API calls, Data Credits, AI Credits, expiration, and example costs by job before checkout.", "done": "A builder can answer: what does Lead enrichment cost, what is free, what is metered, and what should I buy?", "row": "monetize-grow"}, {"id": "stripe-credit", "title": "Stripe one-credit purchase", "owner": "Growth Eng", "phase": "early-june", "priority": "P0", "impact": "Monetization test", "effort": "M", "desc": "Enable a simple one-credit purchase flow through Stripe so paid intent is testable immediately.", "done": "A builder can buy one credit and return to the product with usable balance.", "row": "monetize-grow"}, {"id": "three-minute-quickstart", "title": "3-minute Quickstart above docs fold", "owner": "Docs + DevRel", "phase": "early-june", "priority": "P0", "impact": "First call", "effort": "S", "desc": "Docs should answer how to get credentials and make the first call before explaining app creation, OAuth, scopes, or enterprise prerequisites.", "done": "Create free sandbox account → copy credential → run cURL → see response → install MCP or set up production app.", "row": "value-product"}, {"id": "signup-usage-list", "title": "Signup + usage list", "owner": "Data + RevOps", "phase": "early-june", "priority": "P0", "impact": "Follow-up loop", "effort": "M", "desc": "Create the account/person list of signups and usage for monitoring, support, and follow-up.", "done": "Ben Daters' follow-up owners can see who signed up, where they got stuck, and what they used.", "row": "monetize-grow"}, {"id": "ben-datus-followup", "title": "Builder follow-up coverage", "owner": "Ben Daters team", "phase": "early-june", "priority": "P0", "impact": "Activation", "effort": "S", "desc": "Assign one or two people to help builder personas through setup issues and collect friction patterns.", "done": "Named owners review usage list daily during June launch windows.", "row": "monetize-grow"}, {"id": "one-app-builder", "title": "One App surface for builder", "owner": "One App team", "phase": "early-june", "priority": "P0", "impact": "Primary release", "effort": "L", "desc": "Prioritize the builder-facing One App surface as the first release increment.", "done": "Builder can understand GTM.ai, access the product, and complete the first useful job.", "row": "access"}, {"id": "client-specific-mcp", "title": "Client-specific MCP setup", "owner": "MCP + Docs", "phase": "early-june", "priority": "P1", "impact": "Agent tooling", "effort": "M", "desc": "Generate exact setup for each selected client. Do not mix Claude Code, Claude Desktop, npx, hosted endpoint, and config-path models.", "done": "Claude Code shows Claude Code commands; Claude Desktop shows Desktop config; Codex and Cursor/VS Code get their own paths.", "row": "value-product"}, {"id": "runnable-templates", "title": "Runnable templates for high-value jobs", "owner": "DevRel + Product", "phase": "early-june", "priority": "P1", "impact": "Job completion", "effort": "M", "desc": "Named use cases should instantiate working jobs, not just change sample code.", "done": "Lead enrichment, Account research, Intent monitoring, Company search, and ICP targeting have runnable templates with expected output.", "row": "value-product"}, {"id": "api-mcp-nav-identity", "title": "API/MCP nav + GTM.ai identity", "owner": "Product design", "phase": "late-june", "priority": "P1", "impact": "Continuity", "effort": "S", "desc": "After signup, API/MCP should be a standalone first-level menu item. The header should say GTM.ai, not strand the user inside generic Apps/Execution/GTM Studio language.", "done": "The user always knows they are in the GTM.ai builder path they signed up for.", "row": "value-product"}, {"id": "build-with-vercel", "title": "Build with Vercel", "owner": "Builder growth + Platform", "phase": "late-june", "priority": "P1", "impact": "Event hook", "effort": "M", "desc": "A specific end-of-June card for the Vercel ship event: a build path, demo, or integration story that gives builders a reason to try GTM.ai now.", "done": "Ready for end of June; clear CTA, demo path, and follow-up instrumentation.", "row": "value-product"}, {"id": "public-api-mcp-builder-services", "title": "Public API/MCP for builder services", "owner": "Developer platform + MCP", "phase": "late-june", "priority": "P1", "impact": "Builder services", "effort": "M", "desc": "Make the public API/MCP surface for builder services clear, usable, and event-ready so builders can integrate GTM.ai into their own tools and agents.", "done": "Public API/MCP setup for builder services has clear docs, working examples, and a path from credential to first useful service call.", "row": "value-product"}, {"id": "agent-readable-artifacts", "title": "Agent-readable onboarding artifacts", "owner": "Docs + DevRel", "phase": "late-june", "priority": "P2", "impact": "Agent adoption", "effort": "S", "desc": "Make onboarding actions machine-resolvable: llms.txt, manifest, API/MCP quickstart URLs, setup commands, example prompts, and error recovery.", "done": "An agent can discover the right GTM.ai path without scraping ambiguous UI copy.", "row": "value-product"}, {"id": "sandbox-production-split", "title": "Sandbox now, production later", "owner": "Product + Docs", "phase": "july", "priority": "P0", "impact": "Eligibility clarity", "effort": "S", "desc": "Reconcile free/no-card API promise with Enterprise API, Copilot, DevPortal, scopes, and admin prerequisites. Default trial users to sandbox; hide production setup behind Advanced.", "done": "Public site, docs, signup, and dashboard all say the same thing: sandbox is self-serve; production is governed.", "row": "value-product"}, {"id": "first-call-workbench", "title": "Interactive first-call workbench", "owner": "Developer platform", "phase": "july", "priority": "P1", "impact": "Activation quality", "effort": "M", "desc": "Make /start-building/api prove value in browser before sending users to terminal/docs. The selected use case should run or simulate a real response.", "done": "Builder can run a safe first call, see response, copy code, and understand mapped errors.", "row": "value-product"}, {"id": "seller-one-app", "title": "One App for sellers", "owner": "Sales product", "phase": "july", "priority": "P2", "impact": "Seller expansion", "effort": "L", "desc": "Sequence the seller surface after the builder conversion loop is working and instrumented.", "done": "Seller workflows layer onto proven access, entitlement, usage, and support primitives.", "row": "monetize-grow"}, {"id": "seller-audience-activation", "title": "Audience Activation", "owner": "Sales product", "phase": "july", "priority": "P2", "impact": "Seller workflow", "effort": "M", "desc": "Seller-facing activation path inside One App for turning audiences into usable sales motions.", "done": "A seller can move from selected audience to activated workflow without leaving the seller surface.", "row": "monetize-grow"}, {"id": "seller-chrome-extension", "title": "Chrome Extension", "owner": "Sales product", "phase": "july", "priority": "P2", "impact": "Seller workflow", "effort": "M", "desc": "Chrome Extension entry point and handoff as part of the seller One App experience.", "done": "Seller context from the extension connects cleanly into One App workflows and account/person context.", "row": "monetize-grow"}, {"id": "seller-advanced-search", "title": "Advanced Search", "owner": "Sales product", "phase": "july", "priority": "P2", "impact": "Seller workflow", "effort": "M", "desc": "Advanced Search capabilities sequenced as seller-specific scope, after builder conversion primitives are working.", "done": "Sellers can discover target accounts/people through a coherent One App search experience.", "row": "monetize-grow"}, {"id": "seller-settings", "title": "Settings", "owner": "Sales product", "phase": "july", "priority": "P2", "impact": "Seller workflow", "effort": "S", "desc": "Seller-specific settings, preferences, and configuration needed for the One App seller surface.", "done": "Settings support the seller workflow without competing with June builder onboarding and entitlement work.", "row": "monetize-grow"}, {"id": "seller-complexity", "title": "Seller-specific complexity parking lot", "owner": "Product leadership", "phase": "parking", "priority": "P2", "impact": "Scope control", "effort": "M", "desc": "Park seller-specific asks that compete with builder traffic capture unless they support June conversion directly.", "done": "Every parked seller item has an explicit July-or-later decision.", "row": "monetize-grow"}, {"id": "audiences-in-builder", "title": "Audiences in Builder", "owner": "Audience + Builder platform", "phase": "late-june", "row": "value-product", "priority": "P1", "impact": "Vercel-ready audience story", "effort": "M", "desc": "Expose audience creation and activation primitives in the builder surface so a developer can build audience-backed workflows without leaving GTM.ai.", "done": "A builder can create or use an audience from the builder path and understand the next activation step."}, {"id": "enrich-with-gql-vertical-datasets", "title": "Enrich with GQL (Vertical Datasets)", "owner": "Data platform + Builder platform", "phase": "late-june", "row": "value-product", "priority": "P1", "impact": "Differentiated data value", "effort": "M", "desc": "Make GQL enrichment and vertical datasets available as a clear builder capability, with examples that show how data enrichment plugs into audience and agent workflows.", "done": "A builder can discover, call, and explain GQL-backed vertical dataset enrichment from the builder experience."}, {"id": "agent-teams-in-builder", "title": "Agent Teams in Builder", "owner": "Agent Teams + Builder platform", "phase": "late-june", "row": "value-product", "priority": "P1", "impact": "Workflow expansion", "effort": "M", "desc": "Bring Agent Teams into the builder journey so developers can move from one API/MCP job into orchestrated GTM workflows.", "done": "Agent Teams appears as a builder-ready workflow option with a concrete setup path and at least one runnable example."}];
+const ADDED_KEY = 'gtm-ai-june-sequencing-added-cards-v4';
+const PLACEMENT_KEY = 'gtm-ai-june-sequencing-card-placements-v4';
+const EDITS_KEY = 'gtm-ai-june-sequencing-card-edits-v4';
+const ARTIFACT_SLUG = '2026-05-28/gtm-ai-june-sequencing-discussion-artifact-v3';
+let addedCards = loadJson(ADDED_KEY, []);
+let placements = loadJson(PLACEMENT_KEY, {});
+let cardEdits = loadJson(EDITS_KEY, {});
+let syncTimer = null;
+let cards = [];
+let cardById = {};
+let basePlacement = {};
+const addModal = document.getElementById('add-card-modal');
+const addMeta = document.getElementById('add-modal-meta');
+const addForm = document.getElementById('add-card-form');
+const editModal = document.getElementById('edit-card-modal');
+const editForm = document.getElementById('edit-card-form');
+const editMeta = document.getElementById('edit-modal-meta');
+const syncStatus = document.getElementById('sync-status');
+const hoverCard = document.getElementById('hover-card');
+const hoverMeta = document.getElementById('hover-meta');
+const hoverTitle = document.getElementById('hover-title');
+const hoverDesc = document.getElementById('hover-desc');
+const hoverDone = document.getElementById('hover-done');
+const payloadPanel = document.getElementById('payload-panel');
+const payloadOutput = document.getElementById('payload-output');
+let lastFocus = null;
+let addTarget = null;
+let draggedId = null;
+function loadJson(key, fallback) { try { return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback)); } catch { return fallback; } }
+function saveJson(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+function phaseLabel(phase) { return {'early-june':'Early June','late-june':'End June','july':'July','parking':'Parking'}[phase] || phase; }
+function rowLabel(row) { return {'access':'Access','value-product':'Value / Product','monetize-grow':'Monetize & Grow'}[row] || row; }
+function slugify(value) { return value.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,64) || 'new-card'; }
+function refreshIndex() { cards = [...seedCards, ...addedCards].map(card => ({...card, ...(cardEdits[card.id] || {})})); cardById = Object.fromEntries(cards.map(card => [card.id, card])); }
+function captureBasePlacements() {
+  document.querySelectorAll('td[data-row][data-phase] .chip[data-card-id]').forEach(chip => {
+    const cell = chip.closest('td[data-row][data-phase]');
+    basePlacement[chip.dataset.cardId] = {row: cell.dataset.row, phase: cell.dataset.phase};
+  });
+}
+function currentPlacement(card) { if (placements[card.id]) return placements[card.id]; if (card.row && card.phase) return {row: card.row, phase: card.phase}; if (basePlacement[card.id]) return basePlacement[card.id]; return {row:'first-value', phase: card.phase || 'late-june'}; }
+function makeChip(card) {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = `chip ${String(card.priority || 'P1').toLowerCase()}${card.added ? ' added' : ''}`;
+  btn.dataset.cardId = card.id;
+  btn.draggable = true;
+  btn.title = 'Hover for detail · drag to move';
+  btn.setAttribute('aria-label', `Roadmap card: ${card.title}`);
+  const pri = document.createElement('span'); pri.textContent = card.priority || 'P1';
+  btn.append(pri, document.createTextNode(card.title));
+  return btn;
+}
+function renderGrid() {
+  refreshIndex();
+  document.querySelectorAll('td[data-row][data-phase] .chip[data-card-id]').forEach(el => el.remove());
+  document.querySelectorAll('td[data-row][data-phase]').forEach(cell => {
+    const row = cell.dataset.row, phase = cell.dataset.phase, addBtn = cell.querySelector('.add-card-btn');
+    cards.filter(card => { const p = currentPlacement(card); return p.row === row && p.phase === phase; }).forEach(card => cell.insertBefore(makeChip(card), addBtn));
+    const empty = cell.querySelector('.empty'); if (empty) empty.style.display = cell.querySelector('.chip') ? 'none' : '';
+  });
+}
+function openAddCard(row, phase) {
+  hideHover(); lastFocus = document.activeElement; addTarget = {row, phase};
+  addMeta.innerHTML = `<span>${phaseLabel(phase)}</span><span>${rowLabel(row)}</span>`;
+  addForm.reset(); addForm.elements.priority.value = phase === 'early-june' ? 'P0' : 'P1'; addForm.elements.effort.value = 'M';
+  addModal.classList.add('open'); addModal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; addForm.elements.title.focus();
+}
+function closeAddModal() { addModal.classList.remove('open'); addModal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; if (lastFocus?.focus) lastFocus.focus(); }
+function addCardFromForm(event) {
+  event.preventDefault(); if (!addTarget) return;
+  const fd = new FormData(addForm); const title = String(fd.get('title') || '').trim(); if (!title) return;
+  const idBase = `added-${addTarget.phase}-${addTarget.row}-${slugify(title)}`; let id = idBase, n = 2; while (cardById[id]) id = `${idBase}-${n++}`;
+  const card = { id, title, owner: String(fd.get('owner') || 'Unassigned').trim() || 'Unassigned', phase:addTarget.phase, row:addTarget.row, priority:String(fd.get('priority') || 'P1'), impact:String(fd.get('impact') || 'TBD').trim() || 'TBD', effort:String(fd.get('effort') || 'M'), desc:String(fd.get('desc') || '').trim(), done:String(fd.get('done') || '').trim(), added:true };
+  addedCards.push(card); saveJson(ADDED_KEY, addedCards); renderGrid(); closeAddModal(); queueHostedUpdate('add-card');
+}
+function showHover(id, anchor) {
+  const card = cardById[id]; if (!card || draggedId) return;
+  const p = currentPlacement(card);
+  hoverTitle.textContent = card.title;
+  hoverDesc.textContent = card.desc || '';
+  hoverDone.textContent = card.done || '';
+  hoverMeta.innerHTML = `<span class="${String(card.priority || 'P1').toLowerCase()}">${card.priority || 'P1'}</span><span>${phaseLabel(p.phase)}</span><span>${card.owner || 'Unassigned'}</span><span>Impact: ${card.impact || '—'}</span><span>Effort: ${card.effort || '—'}</span>`;
+  const r = anchor.getBoundingClientRect();
+  const w = Math.min(420, window.innerWidth - 32);
+  let left = Math.min(window.innerWidth - w - 16, Math.max(16, r.right + 12));
+  if (r.right + 12 + w > window.innerWidth && r.left - w - 12 > 16) left = r.left - w - 12;
+  let top = Math.min(window.innerHeight - 260, Math.max(16, r.top - 6));
+  hoverCard.style.left = `${left}px`; hoverCard.style.top = `${top}px`; hoverCard.classList.add('open'); hoverCard.setAttribute('aria-hidden','false');
+}
+function hideHover() { hoverCard.classList.remove('open'); hoverCard.setAttribute('aria-hidden','true'); }
+function moveCard(id, cell) {
+  const row = cell.dataset.row, phase = cell.dataset.phase;
+  const added = addedCards.find(c => c.id === id);
+  if (added) { added.row = row; added.phase = phase; saveJson(ADDED_KEY, addedCards); }
+  placements[id] = {row, phase}; saveJson(PLACEMENT_KEY, placements); renderGrid(); queueHostedUpdate('move-card');
+}
+
+function setSyncStatus(text, cls='') { if (!syncStatus) return; syncStatus.textContent = text; syncStatus.className = `sync-status public-hidden ${cls}`.trim(); }
+function queueHostedUpdate(reason) { /* Public static copy: edits persist locally only. Use Generate update payload to export changes. */ }
+async function sendHostedUpdate(reason='manual-sync') {
+  const payload = buildUpdatePayload(); payload.reason = reason; payload.publicCopy = true;
+  payloadOutput.value = JSON.stringify(payload, null, 2); payloadPanel.hidden = false;
+  return {ok:false, publicCopy:true};
+}
+function openEditCard(id) {
+  hideHover(); refreshIndex(); const card = cardById[id]; if (!card) return; lastFocus = document.activeElement;
+  const p = currentPlacement(card); editMeta.innerHTML = `<span>${phaseLabel(p.phase)}</span><span>${rowLabel(p.row)}</span><span>${card.id}</span>`;
+  editForm.elements.id.value = card.id; editForm.elements.priority.value = card.priority || 'P1'; editForm.elements.owner.value = card.owner || ''; editForm.elements.title.value = card.title || ''; editForm.elements.desc.value = card.desc || ''; editForm.elements.done.value = card.done || ''; editForm.elements.impact.value = card.impact || ''; editForm.elements.effort.value = card.effort || 'M';
+  editModal.classList.add('open'); editModal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; editForm.elements.title.focus();
+}
+function closeEditModal() { editModal.classList.remove('open'); editModal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; if (lastFocus?.focus) lastFocus.focus(); }
+function saveEditCard(event) {
+  event.preventDefault(); const fd = new FormData(editForm); const id = String(fd.get('id') || ''); if (!id) return;
+  const patch = {title:String(fd.get('title') || '').trim(), owner:String(fd.get('owner') || 'Unassigned').trim() || 'Unassigned', priority:String(fd.get('priority') || 'P1'), impact:String(fd.get('impact') || 'TBD').trim() || 'TBD', effort:String(fd.get('effort') || 'M'), desc:String(fd.get('desc') || '').trim(), done:String(fd.get('done') || '').trim()};
+  const added = addedCards.find(c => c.id === id);
+  if (added) { Object.assign(added, patch); saveJson(ADDED_KEY, addedCards); }
+  else { cardEdits[id] = patch; saveJson(EDITS_KEY, cardEdits); }
+  renderGrid(); closeEditModal(); queueHostedUpdate('edit-card');
+}
+
+function copyGridChanges() {
+  const payload = {addedCards, placements, cardEdits};
+  navigator.clipboard?.writeText(JSON.stringify(payload, null, 2));
+}
+function buildSequenceMarkdown(items) {
+  const phaseOrder = ['early-june','late-june','july'];
+  const rowOrder = ['access','value-product','monetize-grow'];
+  return phaseOrder.map(phase => {
+    const lines = [`## ${phaseLabel(phase)}`];
+    rowOrder.forEach(row => {
+      const rowItems = items.filter(item => item.placement.phase === phase && item.placement.row === row);
+      if (!rowItems.length) return;
+      lines.push(`### ${rowLabel(row)}`);
+      rowItems.forEach(item => lines.push(`- [${item.priority || 'P1'}] ${item.title} — ${item.owner || 'Unassigned'}; Done: ${item.done || 'TBD'}`));
+    });
+    return lines.join('\n');
+  }).join('\n\n');
+}
+function buildUpdatePayload() {
+  refreshIndex();
+  const currentCards = cards.map(card => {
+    const placement = currentPlacement(card);
+    return {
+      id: card.id, title: card.title, priority: card.priority || 'P1', owner: card.owner || 'Unassigned',
+      impact: card.impact || 'TBD', effort: card.effort || 'M', desc: card.desc || '', done: card.done || '',
+      added: Boolean(card.added), placement
+    };
+  });
+  return {
+    artifact: {
+      title: 'GTM.ai June Sequencing Discussion Artifact',
+      mode: 'standalone-html-update-payload',
+      generatedAt: new Date().toISOString(),
+      localStorageKeys: {addedCards: ADDED_KEY, placements: PLACEMENT_KEY, cardEdits: EDITS_KEY}
+    },
+    instructionsForHermes: 'Treat this payload as the single source of truth for the hosted artifact. Apply card edits, additions, and placements to cards.json, discussion-artifact.html, and the hosted Artifact Hub index.html so future viewers open with this exact sequence by default.',
+    changes: {addedCards, placements, cardEdits},
+    currentCards,
+    markdownFallback: buildSequenceMarkdown(currentCards)
+  };
+}
+function generateUpdatePayload() {
+  const text = JSON.stringify(buildUpdatePayload(), null, 2);
+  payloadOutput.value = text;
+  payloadPanel.hidden = false;
+  payloadOutput.focus();
+  payloadOutput.select();
+  navigator.clipboard?.writeText(text).catch(() => {});
+}
+function copyUpdatePayload() {
+  const text = payloadOutput.value || JSON.stringify(buildUpdatePayload(), null, 2);
+  payloadOutput.value = text; payloadPanel.hidden = false;
+  navigator.clipboard?.writeText(text).catch(() => { payloadOutput.focus(); payloadOutput.select(); });
+}
+function resetGridChanges() {
+  if (!confirm('Reset moved and locally added cards in this browser?')) return;
+  addedCards = []; placements = {}; cardEdits = {}; saveJson(ADDED_KEY, addedCards); saveJson(PLACEMENT_KEY, placements); saveJson(EDITS_KEY, cardEdits); renderGrid(); queueHostedUpdate('reset-grid');
+}
+document.addEventListener('mouseover', event => { const chip = event.target.closest('.chip[data-card-id]'); if (chip) showHover(chip.dataset.cardId, chip); });
+document.addEventListener('mouseout', event => { const chip = event.target.closest('.chip[data-card-id]'); if (chip && !chip.contains(event.relatedTarget)) hideHover(); });
+document.addEventListener('focusin', event => { const chip = event.target.closest('.chip[data-card-id]'); if (chip) showHover(chip.dataset.cardId, chip); });
+document.addEventListener('focusout', event => { if (event.target.closest('.chip[data-card-id]')) hideHover(); });
+document.addEventListener('dragstart', event => { const chip = event.target.closest('.chip[data-card-id]'); if (!chip) return; draggedId = chip.dataset.cardId; chip.classList.add('dragging'); hideHover(); event.dataTransfer.effectAllowed='move'; event.dataTransfer.setData('text/plain', draggedId); });
+document.addEventListener('dragend', event => { event.target.closest('.chip')?.classList.remove('dragging'); draggedId = null; document.querySelectorAll('td.drop-target').forEach(td => td.classList.remove('drop-target')); });
+document.addEventListener('dragover', event => { const cell = event.target.closest('td[data-row][data-phase]'); if (!cell || !draggedId) return; event.preventDefault(); event.dataTransfer.dropEffect='move'; cell.classList.add('drop-target'); });
+document.addEventListener('dragleave', event => { const cell = event.target.closest('td[data-row][data-phase]'); if (cell && !cell.contains(event.relatedTarget)) cell.classList.remove('drop-target'); });
+document.addEventListener('drop', event => { const cell = event.target.closest('td[data-row][data-phase]'); if (!cell) return; event.preventDefault(); const id = event.dataTransfer.getData('text/plain') || draggedId; if (id) moveCard(id, cell); cell.classList.remove('drop-target'); draggedId = null; });
+document.addEventListener('click', event => {
+  const addBtn = event.target.closest('.add-card-btn'); if (addBtn) { openAddCard(addBtn.dataset.addRow, addBtn.dataset.addPhase); return; }
+  const editChip = event.target.closest('.chip[data-card-id]'); if (editChip) { openEditCard(editChip.dataset.cardId); return; }
+  if (event.target === addModal || event.target.closest('#add-card-modal .modal-close') || event.target.closest('#cancel-add-card')) closeAddModal();
+  if (event.target === editModal || event.target.closest('#edit-card-modal .modal-close') || event.target.closest('#cancel-edit-card')) closeEditModal();
+  if (event.target.closest('#generate-update-payload')) generateUpdatePayload();
+  if (event.target.closest('#sync-hosted-update')) sendHostedUpdate('manual-sync');
+  if (event.target.closest('#copy-added-cards')) copyGridChanges();
+  if (event.target.closest('#copy-update-payload')) copyUpdatePayload();
+  if (event.target.closest('#close-payload')) payloadPanel.hidden = true;
+  if (event.target.closest('#clear-added-cards')) resetGridChanges();
+});
+addForm?.addEventListener('submit', addCardFromForm);
+editForm?.addEventListener('submit', saveEditCard);
+document.addEventListener('keydown', event => { if (event.key === 'Escape') { hideHover(); if (addModal.classList.contains('open')) closeAddModal(); if (editModal.classList.contains('open')) closeEditModal(); } });
+captureBasePlacements();
+renderGrid();
+</script></body>
+</html>
